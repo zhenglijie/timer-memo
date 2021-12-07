@@ -1,0 +1,88 @@
+/* pages/my/my.wxss */
+
+page {
+    background: #f6f6f6;
+}
+
+.profile {
+    width: 60px;
+    height: 60px;
+    border: 2 solid #fff;
+    border-radius: 100rpx;
+    background-color: #fff;
+  }
+  
+.page__hd {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.page__state {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.page__desc {
+    margin-top: 5px;
+    color: #888;
+    text-align: left;
+    font-size: 14px;
+}
+
+.power {
+    margin-top: 30rpx;
+    border-radius: 5px;
+    background-color: white;
+    width: 93%;
+    padding-bottom: 1rpx;
+}
+
+.line {
+  width: 95%;
+  margin: 0 auto;
+  height: 2rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.item {
+    font-family: PingFang SC;
+    font-weight: 400;
+    font-size: 30px;
+    padding: 30rpx 25rpx;
+}
+
+.power_item_icon {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.power_item_title {
+    font-size: 30rpx;
+}
+  
+
+.power_item {
+    padding: 30rpx 25rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sharebtn{
+	width: 100%;
+	height: 40rpx;	
+	opacity:0;
+    position: right;
+    z-index: 2;
+}
+
+.environment {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 24rpx;
+    margin-top: 25%;
+}   
+
+

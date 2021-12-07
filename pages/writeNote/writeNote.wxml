@@ -1,0 +1,11 @@
+<!--pages/writeNote/writeNote.wxml-->
+<view class="container">
+    <view class="contain">
+        <input placeholder="标题" class="_input" bindinput="getTitle"></input>
+        <view class="showTime">{{Time}}</view>
+    </view>
+    
+        <editor placeholder="开始写笔记吧" maxlength="-1" auto-height = "true"></editor>
+    
+    <button type="primary" bindtap="submitNote">提交</button>
+</view>

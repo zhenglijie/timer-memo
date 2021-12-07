@@ -1,0 +1,42 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/todo/todo",
+        "pages/my/my",
+        "pages/personAccount/personAccount",
+        "pages/writeNote/writeNote"
+    ],
+    "tabBar": {
+        "color": "#000",
+        "selectedColor": "#00f",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "笔记",
+                "iconPath": "/images/note-off.png",
+                "selectedIconPath": "/images/note-open.png"
+            },
+            {
+                "pagePath": "pages/todo/todo",
+                "text": "待办",
+                "iconPath": "/images/todo-off.png",
+                "selectedIconPath": "/images/todo-open.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我",
+                "iconPath": "/images/my-off.png",
+                "selectedIconPath": "/images/my-open.png"
+            }
+        ]
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "首页",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

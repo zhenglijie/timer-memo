@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="contain">
+    <view class="info_item">
+        <view class="info_text_title">全部笔记</view>
+        <view class="info_text_tip" hidden="{{!showNoteNumbers}}">{{showNoteNumbers}}条笔记</view>
+        <view>
+            <image class="add_icon" src="/images/add-icon.png" bindtap='addNote'></image>
+        </view> 
+    </view>
+    <view class="search_arr" hidden="{{!showNoteNumbers}}">  
+        <icon class="searchcion" size='25' type='search'></icon>  
+        <input placeholder="搜索笔记" value="{{searchValue}}"  bindconfirm="searchSubmit" class="_input"/>  
+    </view> 
+    
+    <view class="ToDoStyle" hidden="{{!showNoteNumbers}}" wx:for="{{notes}}">
+        <view class="power" bindtap="edit" data-item="{{item}}">
+            <view class="power_info_text">
+                <view style="margin-bottom: 5px;">{{item.title}}</view>
+                <view>{{item.content}}</view>
+            </view>
+            <view class="power_info_text_tip">{{item.Time}}</view>
+        </view>
+    </view>
+    
+    <view class="ToDoImageStyle" hidden="{{showNoteNumbers}}">
+        <view class="imageStyle">
+            <view style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <image src="/images/notes.png" class="imagesize"></image>
+                <view style="display: flex; align-items: center; justify-content: center; color: #C0C0C0;">没有笔记哦</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+

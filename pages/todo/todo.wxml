@@ -1,0 +1,31 @@
+<!--pages/todo/todo.wxml-->
+<view class="contain">
+    <view class="info_item">
+        <view class="info_text_title">全部待办</view>
+        <view class="info_text_tip" hidden="{{!TodoNumber}}">{{TodoNumber}}条待办</view>
+    </view>
+    
+    <view class="ToDoImageStyle" hidden="{{TodoNumber}}">
+        <view class="imageStyle">
+            <view style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <image src="/images/TODO.png" class="imagesize"></image>
+                <view style="display: flex; align-items: center; justify-content: center; color: #C0C0C0;">没有待办哦</view>
+            </view>
+        </view>
+    </view>
+    
+    <view class="ToDoStyle" hidden="{{!TodoNumber}}">
+        <view class="power" wx:for="{{allTodo}}">
+            <view class="power_info_text">
+                <checkbox-group class="wx-checkbox-input">
+                    <checkbox value="{{item.title}}" checked="{{item.checked}}">{{item.title}}</checkbox>
+                </checkbox-group>
+                <view class="power_info_text_tip">{{item.time}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view>
+        <image class="add_icon" src="/images/add-icon.png" bindtap="addToDo"></image>
+    </view>
+</view>
