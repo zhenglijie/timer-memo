@@ -3,6 +3,67 @@ page {
     height:100%
 }
 
+.keep-button{
+    display: inline-block;
+    background-color: #9EBEFB;
+    border-radius: 50rpx;
+    width: 150rpx;
+    text-align: center;
+    height: 70rpx;
+    line-height: 70rpx;
+    position: absolute;
+    right: 55rpx;
+    color: #C2D5FD;
+}
+
+.keep-button2{
+    display: inline-block;
+    background-color: #0000FF;
+    border-radius: 50rpx;
+    width: 150rpx;
+    text-align: center;
+    height: 70rpx;
+    line-height: 70rpx;
+    position: absolute;
+    right: 55rpx;
+    color: #FFFFFF;
+}
+
+.img-collections{
+    padding-top: 25rpx;
+    padding-left: 25rpx;
+}
+
+.img-button{
+    display: inline-block;
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 35rpx;
+}
+
+.input-padding{
+    padding-top: 25rpx;
+}
+
+
+input{
+    margin-left: 25rpx;
+    background-color:#F2F2F2;
+    width: 90%;
+    height: 75rpx;
+    line-height: 75rpx;
+    padding-left: 25rpx;
+    border-radius: 50rpx;
+}
+
+.submit-view{
+    background-color: white;
+    height: 230rpx;
+    border-radius: 50rpx;
+    position: fixed;
+    width: 100%;
+}
+
 .imageStyle {
     display: flex;
     height: 100%;
@@ -90,6 +151,9 @@ page {
 }
 
 .power {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
     margin-top: 30rpx;
     border-radius: 15px;
     background-color: white;

@@ -1,0 +1,5 @@
+<!--pages/userAgreement/userAgreement.wxml-->
+<view style="font-size: large; display: flex;align-items: center; justify-content: center;" >声明</view>
+<view style="margin: 30rpx; ">
+    　　此小程序为学生作品，主要用于对所学知识进行实战练习，时间原因，也只是实现了比较简单的功能，细节欠缺，后续有时间可能会继续更新维护，承诺绝不涉及违法收集个人信息，以及超范围收集个人信息行为，会妥善保管您的信息数据。
+</view>

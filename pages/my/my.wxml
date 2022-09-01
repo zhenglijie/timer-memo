@@ -7,38 +7,39 @@
     </view>
     <view class="power">
         <view class="power_item" bindtap="checkPersonAccInfor">
-            <view class="power_item_title">个人账户</view>
+            <view class="power_item_title">个人信息</view>
             <image class="power_item_icon" src="/images/arrow.svg"></image>
         </view>
         <view class="line"></view>
         <view class="power_item">
             <view class="power_item_title">推荐给好友</view>
-            <button class="sharebtn" open-type="share"></button>
+            <button style="width:100%;border: none;position: absolute; height: 70rpx;" plain="true"   open-type="share"></button>
             <image class="power_item_icon" src="/images/arrow.svg"></image>
         </view>
     </view>
 
     <view class="power">
-        <view class="power_item">
-            <view class="power_item_title">功能介绍</view>
+        <view class="power_item" bindtap="help">
+            <view class="power_item_title">帮助</view>
+            <image class="power_item_icon" src="/images/arrow.svg"></image>
+        </view>
+        <view class="line"></view>
+        <view class="power_item" bindtap="userAgreement">
+            <view class="power_item_title">用户须知</view>
             <image class="power_item_icon" src="/images/arrow.svg"></image>
         </view>
         <view class="line"></view>
         <view class="power_item">
-            <view class="power_item_title">密码锁</view>
+            <view class="power_item_title">意见反馈</view>
+            <button style="width:100%;border: none;position: absolute; height: 70rpx;"  plain="true" open-type="feedback"></button>
             <image class="power_item_icon" src="/images/arrow.svg"></image>
         </view>
         <view class="line"></view>
-        <view class="power_item">
-            <view>帮助</view>
-            <image class="power_item_icon" src="/images/arrow.svg"></image>
-        </view>
-        <view class="line"></view>
-        <view class="power_item">
-            <view class="power_item_title">关于小程序</view>
+        <view class="power_item" bindtap="aboutMinprogram">
+            <view class="power_item_title" >关于小程序</view>
             <image class="power_item_icon" src="/images/arrow.svg"></image>
         </view>
     </view>
+    <view class="environment">当前版本1.2.1</view>
 
-    <view class="environment">当前版本1.0.1</view>
 </view>

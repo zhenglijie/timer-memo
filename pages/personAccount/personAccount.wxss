@@ -1,1 +1,94 @@
 /* pages/personAccount/personAccount.wxss */
+
+.content{
+    background-color: #f6f6f6;
+    height: 1200rpx;
+  }
+  .nav{
+    background-color: #f6f6f6;
+  }
+
+  page {
+    background-color: #f6f6f6;
+  }
+  
+  .top {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200rpx;
+    height: 200rpx;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+  }
+   
+  .userInfo {
+    background-color: #f6f6f6;
+  }
+  .nickname{
+    margin-top: 5rpx;
+    margin-bottom: 10rpx;
+    text-align: center;
+    height: 90rpx;
+  }
+  .item{
+    height: 120rpx;
+    background-color: #fff;
+    display: flex;
+    line-height: 120rpx;
+    margin: 0 26rpx;
+    border-bottom: 1rpx solid #dcdcdc3f;
+    text-align: end;
+  }
+  .line {
+    width: 95%;
+    margin: 0 auto;
+    height: 2rpx;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .left{
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+  .right{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    color: #ccc;
+    margin-right: 20rpx;
+  }
+  .box1{
+    position: relative;
+    margin:-34rpx 21rpx;
+    border-radius: 40rpx;
+    width: 95%;
+    border: 1rpx solid #f6f6f6;
+    background-color: white;
+    box-shadow: 1px #f6f6f6;
+  }
+  .box2{
+    position: relative;
+    margin: 60rpx 21rpx;
+    border-radius: 40rpx;
+    width: 95%;
+    background-color: white;
+    box-shadow: 1px #DCDCDC;
+  }
+  .genderPicker{
+    justify-content: flex-end;
+    flex-grow: 1;
+    color: #ccc;
+    position: absolute;
+    right: 35rpx;
+  }
+  
+  .region{
+    justify-content: flex-end;
+    flex-grow: 1;
+    color: #ccc;
+    position: absolute;
+    right: 35rpx;
+  }

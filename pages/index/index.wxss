@@ -61,7 +61,7 @@ page {
   background-color: #f6f6f6;
   width: 100%;
   z-index: 2;
-  height: 120rpx;
+  height: 200rpx;
   top: 0%;
 }
 
@@ -76,7 +76,7 @@ page {
   background-color: white;  
   border: 1px solid #d0d0d0;  
   border-radius: 25rpx;  
-  margin: 150rpx 15rpx 0rpx 15rpx;
+  margin: 12rpx 15rpx 0rpx 15rpx;
 }  
 
 .search_arr input{  
@@ -136,7 +136,7 @@ page {
   flex-direction: column;
   align-items: center;   
   justify-items: center;
-  margin-top: 50%;
+  margin-top: 45%;
 }
 
 .imagesize { 
@@ -172,7 +172,7 @@ page {
 }
 
 .power_info_text_title {
-  margin-top: 10rpx;
+  margin-top: 15rpx;
   font-weight: 400;
   font-size: 35rpx;
 }

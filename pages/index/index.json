@@ -1,5 +1,7 @@
 {
   "usingComponents": {},
   "navigationBarTitleText":"我的笔记",
-  "onReachBottomDistance":20
+  "onReachBottomDistance":20,
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle": "dark"
 }

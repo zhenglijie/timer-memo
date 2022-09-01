@@ -1,2 +1,77 @@
 <!--pages/personAccount/personAccount.wxml-->
-<text>pages/personAccount/personAccount.wxml</text>
+<!--index.wxml-->
+<view class="content">
+  <view class="userInfo"></view>
+  <view class="positiveAbsolute"></view>
+  <view class='nav'>
+    <view wx:if="{{isLogin}}" class='top'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view wx:if="{{!isLogin}}" class='top'>
+      <image style="width: 200rpx; height: 200rpx;" src="/images/nologin.png"></image>
+    </view>
+
+    <view wx:if = "{{isLogin}}" class='nickname'>
+      <open-data type="userNickName"></open-data> 
+    </view>
+    <view wx:if = "{{!isLogin}}" class='nickname'>
+      <view>未登录</view>
+    </view>
+
+  </view>
+  <view class="box1">
+    <picker bindchange='pickerSex' range='{{gender}}'>
+      <view class='item'>
+        <view>
+          <text>性别</text>
+          <!-- <text wx:if = "{{FillGender}}" class="genderPicker">{{SEX}}</text> -->
+          <!-- <text wx:if = "{{isFillSubmit}}" class="genderPicker">{{SEX}}</text> -->
+          <text wx:if = "{{!FillGender}}" class="genderPicker">未填写</text>
+          <text wx:if = "{{FillGender}}" class="genderPicker">{{SEX}}</text>
+        </view>
+      </view>
+    </picker>
+    <view class='line'></view>
+    <picker mode='region' bindchange='pickerRegion'>
+      <view class='item'>
+        <view>
+          <text>籍贯</text> 
+           <text wx:if = "{{!FillNativePlace}}" class="region">未填写</text> 
+           <text wx:if = "{{FillNativePlace}}" class="region">{{BirthPlace}}</text> 
+        </view>
+      </view>
+    </picker>
+    <view class='line'></view>
+    <picker mode='date' start="1900-01-01" end="2999-12-12" bindchange='pickerDate'>
+      <view class='item'>
+        <view>
+          <text>出生日期</text>
+          <text wx:if= "{{!FillDateOfBirth}}" class="region">未填写</text>
+          <text wx:if= "{{FillDateOfBirth}}" class="region">{{Birthday}}</text>
+        </view>
+      </view>
+    </picker>
+  </view>
+  <view class='box2'>
+    <view class='item' bindtap="FillYourMobile">
+      <text class='left'>手机号</text>
+      <text wx:if="{{!FillTle}}" class='right'>未填写</text>
+      <text wx:if="{{FillTle}}" class='right'>{{Tle}}</text>
+    </view>
+    <view class='line'></view>
+    <view class='item' bindtap='FillEmail'>
+      <text class='left'>电子邮箱</text>
+      <text class='right' wx:if="{{!FillEmail}}">未绑定</text>
+      <text class='right' wx:else>{{Email}}</text>
+    </view>
+    <view class='line'></view>
+    <view class='item' bindtap='resetpwd'>
+      <text class='left'>注册时间</text><text class='right'>{{RegistrationTime}}</text>
+    </view>
+  </view>
+</view>
+<view hidden='{{flag}}'>
+  <view class="content-item">性别：{{person.sex}}</view>
+  <view class="content-item">籍贯：{{person.birthplace}}</view>
+  <view class="content-item">出生日期：{{person.birthday}}</view>
+</view>

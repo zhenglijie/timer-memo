@@ -1,0 +1,7 @@
+<view>当前选择：{{currentChoose}}</view>
+<button bind:tap="openPicker">打开选择器</button>
+
+<van-action-sheet show="{{ show }}" bind:close="onClose"          bind:getuserinfo="onGetUserInfo">
+  <van-datetime-picker type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:cancel="onCancel"
+    bind:confirm="onConfirm"  bind:change="onChange" />
+</van-action-sheet>

@@ -35,7 +35,7 @@ page {
 
 .power {
     margin-top: 30rpx;
-    border-radius: 5px;
+    border-radius: 7px;
     background-color: white;
     width: 93%;
     padding-bottom: 1rpx;
@@ -56,7 +56,7 @@ page {
 }
 
 .power_item_icon {
-    width: 30rpx;
+    width: 20rpx;
     height: 30rpx;
 }
 
@@ -69,13 +69,16 @@ page {
     padding: 30rpx 25rpx;
     display: flex;
     justify-content: space-between;
+    height: 40rpx;
 }
 
 .sharebtn{
-	width: 100%;
-	height: 40rpx;	
+    margin:0;
+    padding: 0;
+	width:300px;
+	height: 83rpx;	
 	opacity:0;
-    position: right;
+    position: relative; 
     z-index: 2;
 }
 

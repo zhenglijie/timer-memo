@@ -1,0 +1,10 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText":"帮助",
+  "plugins": {
+        "tucao": {
+            "version": "",
+            "provider": "wx8abaf00ee8c3202e"
+        }
+    }
+}

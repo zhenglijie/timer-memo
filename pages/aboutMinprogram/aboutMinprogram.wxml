@@ -1,0 +1,29 @@
+<!--pages/aboutMinprogram/aboutMinprogram.wxml-->
+<view style="margin: 20rpx; padding: 20rpx; color: black;">
+    <view>
+        　　此小程序是学生作品，主要是对所学知识的实战练习，也是结课大作业。
+        之前也没有什么开发经验，于是只好现学现卖，用两个星期多的时间实现了一个简易的手机备忘录，也是学到了很多东西，主要是仿照华为手机备忘录实现。到学期末了，还有两个大作业，还有两周的实训任务，还有复习任务，时间紧迫，对于细节欠缺实在太多，界面也不够美观，也遇到了一系列的技术问题，包括界面的设计，功能上涉及到进程的异步，云资源开销问题等等，大部分都通过向大佬请教，以及查询资料解决，还有一小部分问题以及代码运行的空间时间效率问题需要解决，在玩的过程中有什么意见或者建议可以反馈给我，等忙完这个月有时间可能还会继续更新的，请多指教。 
+    </view>
+    <view>
+        <text decode="{{true}}">
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 作者：SDUST, zlj, lxx
+        </text>
+    </view>
+    <view>
+        <text decode="{{true}}">
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 指导老师：SDUST, wgc
+        </text>
+    </view>
+    <view decode="{{true}}">
+        感谢 \n
+    </view>
+    <view>
+        SDUST，xy同学，wx同学，cyx同学。
+    </view>
+    <view>
+        QUST, wry同学。
+    </view>
+    <view>
+        提供技术帮助。
+    </view>
+</view>

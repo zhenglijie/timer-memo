@@ -1,5 +1,5 @@
 <!--pages/todo/todo.wxml-->
-<view class="contain">
+<view class="contain" bindtouchstart="closeDialog">
     <view class="info_item">
         <view class="info_text_title">全部待办</view>
         <view class="info_text_tip" hidden="{{!TodoNumber}}">{{TodoNumber}}条待办</view>
@@ -15,17 +15,49 @@
     </view>
     
     <view class="ToDoStyle" hidden="{{!TodoNumber}}">
-        <view class="power" wx:for="{{allTodo}}">
+        <view class="power" wx:for="{{allTodo}}" bindtap="ModifyTodo">
             <view class="power_info_text">
-                <checkbox-group class="wx-checkbox-input">
-                    <checkbox value="{{item.title}}" checked="{{item.checked}}">{{item.title}}</checkbox>
+                <checkbox-group class="wx-checkbox-input" bindchange="IsFinshTodos">
+                    <checkbox value="{{item._id}}" checked="{{item.Isdone}}" data-id="{{item._id}}" bindtap="checkTodos">
+                        <text wx:if="{{item.Ischooseimportant && !item.Isdone}}" style="color: red;">{{item.content}}(重要)</text>
+                        <text wx:elif="{{item.Isdone}}" style='color:#BEBEBE;text-decoration:line-through;'>{{item.content}}</text>
+                        <text wx:else>{{item.content}}</text>
+                    </checkbox>
                 </checkbox-group>
-                <view class="power_info_text_tip">{{item.time}}</view>
+
+                <view wx:if="{{item.time && item.Isdone}}"class="power_info_text_tip" style='color:#BEBEBE;text-decoration:line-through;' >待办时间：{{item.time}}</view>
+                <view wx:elif="{{(item.time && (currentSystemTime > item.time || item.Islate))}}" class="power_info_text_tip" style="color: red;">待办时间：{{item.time}} 已过期</view>
+                <view wx:elif="{{item.time && currentSystemTime <= item.time}}" class="power_info_text_tip" style="color: black;">待办时间：{{item.time}}</view>
             </view>
+            <image src="/images/delete.png" style="width: 70rpx; height: 70rpx; margin-top: 25rpx; margin-right: 20rpx;" data-item = "{{item}}" bindtap="deleteTodo"></image>
         </view>
     </view>
+</view>
+<view>
+    <image class="add_icon" src="/images/add-icon.png" bindtap="addToDo"></image>
+</view>
 
-    <view>
-        <image class="add_icon" src="/images/add-icon.png" bindtap="addToDo"></image>
+<!-- {{keyboardHeight}} -->
+<view class="submit-view" style="bottom: {{keyboardHeight+200}}rpx;" wx:if="{{Show}}">
+    <view class="input-padding">
+        <input type="text" placeholder="请输入待办事项" focus='{true}' value="{{TodoContent}}" bindinput="getTodoInput" bindkeyboardheightchange = "heightChange" hold-keyboard = "true" />
+    </view>
+    <view class="img-collections">
+
+
+        <image wx:if="{{!IschooseClock}}" src="/images/clock-off.png" class="img-button" bindtap="openPicker"/>
+        <image wx:if="{{IschooseClock}}" src="/images/clock-open.png" class="img-button" bindtap="openPicker"/>
+
+        <image wx:if="{{!IschooseImportant}}" src="/images/important-off.png" class="img-button" bindtap="ChooseImportant"/>
+        <image wx:else src="/images/important-open.png" class="img-button" bindtap="ChooseImportant"></image>
+        
+        <text>{{currentChoose}}</text>
+        <text wx:if="{{!haveInput}}" class="keep-button">保存</text>
+        <text wx:else class="keep-button2" bindtap="Save">保存</text>
     </view>
 </view>
+
+<van-action-sheet show="{{ Isshow }}" bind:close="onClose"          bind:getuserinfo="onGetUserInfo">
+  <van-datetime-picker type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:cancel="onCancel"
+    bind:confirm="onConfirm"  bind:change="onChange" />
+</van-action-sheet>

@@ -5,7 +5,12 @@
         "pages/todo/todo",
         "pages/my/my",
         "pages/personAccount/personAccount",
-        "pages/writeNote/writeNote"
+        "pages/writeNote/writeNote",
+        "pages/chooseTime/chooseTime",
+        "pages/userAgreement/userAgreement",
+        "pages/feedbackSuggestion/feedbackSuggestion",
+        "pages/aboutMinprogram/aboutMinprogram",
+        "pages/help/help"
     ],
     "tabBar": {
         "color": "#000",

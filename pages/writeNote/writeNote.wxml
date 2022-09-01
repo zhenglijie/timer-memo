@@ -1,11 +1,38 @@
 <!--pages/writeNote/writeNote.wxml-->
-<view class="container">
+<view wx:if = "{{ischeck}}" class="container">
     <view class="contain">
-        <input placeholder="标题" class="_input" bindinput="getTitle"></input>
+        <input placeholder="" value = "{{title}}" class="_input" bindinput="getTitle"></input>
         <view class="showTime">{{Time}}</view>
     </view>
+    <textarea style="border: solid 1px black; height: 200px;" placeholder="" value="{{content}}" maxlength="-1" auto-height="true" bindinput = "getContent"></textarea>
+    <view class="row">
+        <button type="primary" style="width:49%;" bindtap="submitNote">保存</button>
+        <button type="primary" style="width:49%;" bindtap="DeleteNote" disabled	= "{{disable}}">删除</button>
+    </view>
+</view>
+
+
+<!--index.wxml-->
+
+<!-- <view class="showTime">时间：{{Time}}</view> -->
+<view wx:else class="container">
+    <view class='title'>
+        <input  name="title" placeholder="在此输入标题" value="{{title}}" bindinput="getTitle"/>
+    </view>
+    <view class='row' id="textareawrap" catchtap="onFocus">
+        <textarea  fixed="true" class='text' value="{{content}}" maxlength="5000"  
+        focus='{{focus}}' name="content"   placeholder="请输入内容"  bindinput = "getContent"/>
+    </view>
     
-        <editor placeholder="开始写笔记吧" maxlength="-1" auto-height = "true"></editor>
-    
-    <button type="primary" bindtap="submitNote">提交</button>
+    <view class='bottom'>
+        <!-- <van-button style="width: 45%;" color="linear-gradient(to right, #4bb0ff, #6149f6)">
+            保存
+        </van-button>
+        <van-button style="width: 45%;" color="linear-gradient(to right, #4bb0ff, #6149f6)">
+            删除
+        </van-button> -->
+        <!-- <button>hahha </button> -->
+        <button class='btn success' hover-class="plain-hover" bindtap="submitNote">保存</button>
+        <button class='btn del' hover-class="plain-hover" bindtap="DeleteNote" disabled = "{{disable}}">删除</button>
+    </view>
 </view>

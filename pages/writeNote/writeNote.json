@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText":"写笔记"
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  },
+  "navigationBarTitleText":"写下你容易忘记的东西"
 }

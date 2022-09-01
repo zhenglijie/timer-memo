@@ -1,4 +1,9 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText":"我的待办"
+  "usingComponents": {
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index"
+  },
+  "navigationBarTitleText":"我的待办",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle": "dark"
 }
