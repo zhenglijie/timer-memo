@@ -1,2 +1,1 @@
-# 时光memo小程序
-一个笔记本微信小程序。
+This is a WeChat applet
